@@ -9,6 +9,7 @@
 
 using System;
 using System.IO;
+using System.Text;
 using UnityEditor;
 
 public class AssetModification : UnityEditor.AssetModificationProcessor
@@ -38,7 +39,7 @@ public class AssetModification : UnityEditor.AssetModificationProcessor
         header = header.Replace("#SCRIPTNAME#", Path.GetFileNameWithoutExtension(path));
         header = header.Replace("#DATE#", DateTime.Now.ToString("yyyy/MM/dd"));
         header += File.ReadAllText(path);
-        File.WriteAllText(path, header);
+        File.WriteAllText(path, header, new UTF8Encoding(false));
         AssetDatabase.Refresh();
     }
 
