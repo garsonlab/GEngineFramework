@@ -14,24 +14,24 @@ namespace GEngine.Interface
     public interface IModel
     {
         /// <summary>
-        /// ×¢²áProxy
+        /// æ³¨å†ŒProxy
         /// </summary>
         /// <param name="proxy"></param>
         void RegisterProxy(Proxy proxy);
         /// <summary>
-        /// »ñÈ¡Proxy
+        /// è·å–Proxy
         /// </summary>
-        /// <param name="proxyName">Ãû×Ö</param>
+        /// <param name="proxyName">åå­—</param>
         /// <returns></returns>
         T RetrieveProxy<T>(string proxyName) where T : Proxy;
         /// <summary>
-        /// ÒÆ³ı
+        /// ç§»é™¤
         /// </summary>
         /// <param name="proxyName"></param>
         /// <returns></returns>
         T RemoveProxy<T>(string proxyName) where T : Proxy;
         /// <summary>
-        /// ÊÇ·ñÒÑ´æÔÚ
+        /// æ˜¯å¦å·²å­˜åœ¨
         /// </summary>
         /// <param name="proxyName"></param>
         /// <returns></returns>

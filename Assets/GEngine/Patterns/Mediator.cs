@@ -10,7 +10,7 @@
 namespace GEngine.Patterns
 {
     /// <summary>
-    /// ½çÃæÏÔÊ¾´¦Àí
+    /// ç•Œé¢æ˜¾ç¤ºå¤„ç†
     /// </summary>
     public class Mediator : KernalBase
     {
@@ -28,15 +28,15 @@ namespace GEngine.Patterns
 
         #region Public
         /// <summary>
-        /// Ãû³Æ£¬ÓÉ¹¹Ôìº¯Êı´«Èë
+        /// åç§°ï¼Œç”±æ„é€ å‡½æ•°ä¼ å…¥
         /// </summary>
         public string MediatorName { get { return m_mediatorName; } }
         /// <summary>
-        /// ¸Õ±»×¢²áÊ±µ÷ÓÃ
+        /// åˆšè¢«æ³¨å†Œæ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRegister() { }
         /// <summary>
-        /// ÒÆ³ıÊ±µ÷ÓÃ
+        /// ç§»é™¤æ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRemove() { }
         #endregion

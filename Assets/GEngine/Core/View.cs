@@ -13,7 +13,7 @@ using GEngine.Patterns;
 namespace GEngine.Core
 {
     /// <summary>
-    /// 管理所有的Mediator
+    /// 绠＄悊鎵�鏈夌殑Mediator
     /// </summary>
     public class View : IView
     {

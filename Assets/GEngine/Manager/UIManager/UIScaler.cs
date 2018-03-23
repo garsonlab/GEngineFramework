@@ -12,22 +12,22 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// ·ÇÈ«ÆÁËõ·ÅÄ£Ê½
+    /// éå…¨å±ç¼©æ”¾æ¨¡å¼
     /// </summary>
     public enum ScaleMode
     {
         /// <summary>
-        /// Æ¥Åä¿í¶È
+        /// åŒ¹é…å®½åº¦
         /// </summary>
         MatchWidth = 1,
         /// <summary>
-        /// Æ¥Åä¸ß¶È
+        /// åŒ¹é…é«˜åº¦
         /// </summary>
         MatchHeight
     }
 
     /// <summary>
-    /// ÊÊÅä·½°¸
+    /// é€‚é…æ–¹æ¡ˆ
     /// </summary>
     public enum AdaptPolicy
     {
@@ -44,7 +44,7 @@ namespace GEngine.Managers
 
 
     /// <summary>
-    /// UIÊÊÅä½â¾ö·½°¸
+    /// UIé€‚é…è§£å†³æ–¹æ¡ˆ
     /// </summary>
     public class UIScaler
     {
@@ -54,7 +54,7 @@ namespace GEngine.Managers
         private static float m_scaleM;
 
         /// <summary>
-        /// ÖØÖÃÊÊÅä²ÎÊı
+        /// é‡ç½®é€‚é…å‚æ•°
         /// </summary>
         public static void ResetScaler()
         {
@@ -64,11 +64,11 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// Ïà¶ÔÆÁÄ»ÊÊÅäËõ·Å£¨»áĞŞ¸ÄÃªµãÎªÖĞĞÄ£©
+        /// ç›¸å¯¹å±å¹•é€‚é…ç¼©æ”¾ï¼ˆä¼šä¿®æ”¹é”šç‚¹ä¸ºä¸­å¿ƒï¼‰
         /// </summary>
-        /// <param name="policy">ÊÊÅä²ßÂÔ</param>
-        /// <param name="transform">ÊÊÅäÄ¿±ê</param>
-        /// <param name="isStretch">ÊÇ·ñÀ­Éì, Ö¸°´×î´óËõ·Å±ÈÀı</param>
+        /// <param name="policy">é€‚é…ç­–ç•¥</param>
+        /// <param name="transform">é€‚é…ç›®æ ‡</param>
+        /// <param name="isStretch">æ˜¯å¦æ‹‰ä¼¸, æŒ‡æŒ‰æœ€å¤§ç¼©æ”¾æ¯”ä¾‹</param>
         public static void Rescale(AdaptPolicy policy, RectTransform transform, bool isStretch = false)
         {
             float scale = isStretch ? m_scaleM : (scaleMode == ScaleMode.MatchWidth ? m_scaleX : m_scaleY);
@@ -114,23 +114,23 @@ namespace GEngine.Managers
 
 
         /// <summary>
-        /// Ïà¶Ô¹ØÁª×é¼şÊÊÅäÎ»ÖÃ£¨»áĞŞ¸ÄÃªµãÎªÖĞĞÄ£©
+        /// ç›¸å¯¹å…³è”ç»„ä»¶é€‚é…ä½ç½®ï¼ˆä¼šä¿®æ”¹é”šç‚¹ä¸ºä¸­å¿ƒï¼‰
         /// </summary>
-        /// <param name="target">ÊÊÅäÄ¿±ê</param>
-        /// <param name="relative">¹ØÁªÄ¿±ê</param>
-        /// <param name="policy">ÊÊÅä²ßÂÔ</param>
+        /// <param name="target">é€‚é…ç›®æ ‡</param>
+        /// <param name="relative">å…³è”ç›®æ ‡</param>
+        /// <param name="policy">é€‚é…ç­–ç•¥</param>
         public static void SetRelativePos(RectTransform target, RectTransform relative, AdaptPolicy policy)
         {
             Vector2 pos = target.anchoredPosition;
 
             Vector2 p_middle = relative.sizeDelta * 0.5f;
-            p_middle.x = p_middle.x * relative.localScale.x; p_middle.y = p_middle.y * relative.localScale.y;//¿¼ÂÇµ½Ëõ·Å
+            p_middle.x = p_middle.x * relative.localScale.x; p_middle.y = p_middle.y * relative.localScale.y;//è€ƒè™‘åˆ°ç¼©æ”¾
             Vector2 s_middle = target.sizeDelta * 0.5f;
             s_middle.x = s_middle.x * target.localScale.x; s_middle.y = s_middle.y * target.localScale.y;
 
-            target.anchorMax = Vector2.one * 0.5f;//ÖØÖÃÃªµãÎ»ÖÃÎª¾ÓÖĞ
+            target.anchorMax = Vector2.one * 0.5f;//é‡ç½®é”šç‚¹ä½ç½®ä¸ºå±…ä¸­
             target.anchorMin = Vector2.one * 0.5f;
-            target.anchoredPosition = Vector2.zero;//ÖØÖÃUIÎ»ÖÃÎªÕıÖĞ
+            target.anchoredPosition = Vector2.zero;//é‡ç½®UIä½ç½®ä¸ºæ­£ä¸­
 
             switch (policy)
             {

@@ -83,9 +83,9 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ÉèÖÃÔİÍ£
+        /// è®¾ç½®æš‚åœ
         /// </summary>
-        /// <param name="pause">ÊÇ·ñÔİÍ£</param>
+        /// <param name="pause">æ˜¯å¦æš‚åœ</param>
         public void SetPause(bool pause)
         {
             this.m_isPause = pause;

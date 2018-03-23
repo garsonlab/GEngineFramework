@@ -13,13 +13,13 @@ using GEngine.Patterns;
 using UnityEngine;
 
 
-//ÏûÏ¢´úÀí
+//æ¶ˆæ¯ä»£ç†
 public delegate void MessageHandler(MessageArgs messageArgs);
 
-//¶¨Ê±Æ÷´úÀí
+//å®šæ—¶å™¨ä»£ç†
 public delegate void TimerHandler(object parm);
 
-//Ğ­³Ì´úÀí
+//åç¨‹ä»£ç†
 public delegate Coroutine StartCoroutineHandler(IEnumerator routine);
 
 

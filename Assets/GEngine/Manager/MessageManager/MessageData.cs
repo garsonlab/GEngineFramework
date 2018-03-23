@@ -15,15 +15,15 @@ namespace GEngine.Managers
     public class MessageData : IComparable<MessageData>
     {
         /// <summary>
-        /// 消息类型
+        /// 娑堟伅绫诲瀷
         /// </summary>
         public int Type { get; set; }
         /// <summary>
-        /// 优先级，数值越大优先级越高
+        /// 浼樺厛绾э紝鏁板�艰秺澶т紭鍏堢骇瓒婇珮
         /// </summary>
         public int Priority { get; set; }
         /// <summary>
-        /// 消息回调
+        /// 娑堟伅鍥炶皟
         /// </summary>
         public MessageHandler Handler { get; set; }
 

@@ -13,7 +13,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// MonoBehaviorµÄOnGUI¹ÜÀíÆ÷
+    /// MonoBehaviorçš„OnGUIç®¡ç†å™¨
     /// </summary>
     public class GUIManager : Manager
     {

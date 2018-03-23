@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// Êó±ê²Ù×÷£¬Êó±ê×ó¼üµÄ8ÖÖĞĞÎª£»Ëõ·ÅÊ¹ÓÃÖĞÑë¹öÂÖ£¬z±íÊ¾Ëõ·ÅÔöÁ¿¡£
+    /// é¼ æ ‡æ“ä½œï¼Œé¼ æ ‡å·¦é”®çš„8ç§è¡Œä¸ºï¼›ç¼©æ”¾ä½¿ç”¨ä¸­å¤®æ»šè½®ï¼Œzè¡¨ç¤ºç¼©æ”¾å¢é‡ã€‚
     /// </summary>
     public class EditorInput : InputBase
     {

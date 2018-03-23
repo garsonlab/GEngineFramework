@@ -10,7 +10,7 @@
 namespace GEngine.Patterns
 {
     /// <summary>
-    /// ²Ù×÷¼ÆËã´¦Àí
+    /// æ“ä½œè®¡ç®—å¤„ç†
     /// </summary>
     public class Command : KernalBase
     {
@@ -27,15 +27,15 @@ namespace GEngine.Patterns
 
         #region Public
         /// <summary>
-        /// Ãû³Æ£¬ÓÉ¹¹Ôìº¯Êı´«Èë
+        /// åç§°ï¼Œç”±æ„é€ å‡½æ•°ä¼ å…¥
         /// </summary>
         public string CommandName { get { return m_name; } }
         /// <summary>
-        /// ¸Õ±»×¢²áÊ±µ÷ÓÃ
+        /// åˆšè¢«æ³¨å†Œæ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRegister() { }
         /// <summary>
-        /// ÒÆ³ıÊ±µ÷ÓÃ
+        /// ç§»é™¤æ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRemove() { }
         #endregion

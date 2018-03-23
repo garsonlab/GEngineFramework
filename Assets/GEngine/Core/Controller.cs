@@ -14,7 +14,7 @@ using GEngine.Patterns;
 namespace GEngine.Core
 {
     /// <summary>
-    /// 控制器，管理所有的Command
+    /// 鎺у埗鍣紝绠＄悊鎵�鏈夌殑Command
     /// </summary>
     public class Controller : IController
     {

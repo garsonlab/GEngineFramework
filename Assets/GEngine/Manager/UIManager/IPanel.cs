@@ -26,54 +26,54 @@ namespace GEngine.Managers
     }
 
     /// <summary>
-    /// UI¼ÓÔØ·½Ê½
+    /// UIåŠ è½½æ–¹å¼
     /// </summary>
     public enum PanelLoad
     {
-        Load = 0,//Í¬²½
-        SyncLoad = 1,//Òì²½
+        Load = 0,//åŒæ­¥
+        SyncLoad = 1,//å¼‚æ­¥
     }
 
     /// <summary>
-    /// Ãæ°å×´Ì¬
+    /// é¢æ¿çŠ¶æ€
     /// </summary>
     public enum PanelState
     {
-        None,//¸Õ³õÊ¼»¯
-        Loading,//ÕıÔÚ¼ÓÔØÖĞ
-        Showing,//ÕıÔÚÏÔÊ¾
-        Close,//ÒÑ¹Ø±Õ
-        Destroy,//ÒÑÏú»Ù
+        None,//åˆšåˆå§‹åŒ–
+        Loading,//æ­£åœ¨åŠ è½½ä¸­
+        Showing,//æ­£åœ¨æ˜¾ç¤º
+        Close,//å·²å…³é—­
+        Destroy,//å·²é”€æ¯
     }
 
     public interface IPanel
     {
         /// <summary>
-        /// µ±Ç°Ãæ°å×´Ì¬
+        /// å½“å‰é¢æ¿çŠ¶æ€
         /// </summary>
         PanelState PanelState { get; }
         /// <summary>
-        /// ÏÔÊ¾½çÃæ
+        /// æ˜¾ç¤ºç•Œé¢
         /// </summary>
-        /// <param name="parm">²ÎÊı</param>
-        /// <param name="callback">»Øµ÷</param>
+        /// <param name="parm">å‚æ•°</param>
+        /// <param name="callback">å›è°ƒ</param>
         void Show(object parm = null, Callback_0 callback = null);
         /// <summary>
-        /// ±¾µØ»¯
+        /// æœ¬åœ°åŒ–
         /// </summary>
         void Localize();
         //void Init();
         /// <summary>
-        /// UIÊÊÅä
+        /// UIé€‚é…
         /// </summary>
         void Resize();
         /// <summary>
-        /// ¹Ø±Õ½çÃæ
+        /// å…³é—­ç•Œé¢
         /// </summary>
         /// <param name="callback"></param>
         void Close();
         /// <summary>
-        /// Ïú»Ù
+        /// é”€æ¯
         /// </summary>
         void Destroy();
     }

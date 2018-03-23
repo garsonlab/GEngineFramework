@@ -15,56 +15,56 @@ namespace GEngine.Managers
     public enum InputType
     {
         /// <summary>
-        /// ´¥Ãş¿ªÊ¼
+        /// è§¦æ‘¸å¼€å§‹
         /// </summary>
         OnTouchBegin = 0,
         /// <summary>
-        /// ³¤°´
+        /// é•¿æŒ‰
         /// </summary>
         OnLongPress = 1,
         /// <summary>
-        /// ¿ªÊ¼ÒÆ¶¯
+        /// å¼€å§‹ç§»åŠ¨
         /// </summary>
         OnMoveBegin,
         /// <summary>
-        /// ÒÆ¶¯ÖĞ
+        /// ç§»åŠ¨ä¸­
         /// </summary>
         OnMove,
         /// <summary>
-        /// ÒÆ¶¯½áÊø
+        /// ç§»åŠ¨ç»“æŸ
         /// </summary>
         OnMoveEnd,
         /// <summary>
-        /// µã»÷
+        /// ç‚¹å‡»
         /// </summary>
         OnClick,
         /// <summary>
-        /// ´¥Ãş½áÊø
+        /// è§¦æ‘¸ç»“æŸ
         /// </summary>
         OnTouchEnd,
         /// <summary>
-        /// Ëõ·Å£¬»Øµ÷x,y±íÊ¾Ëõ·Å³õÊ¼ÖĞĞÄµã£¬zÎªµ±Ç°Ëõ·ÅÔöÁ¿
+        /// ç¼©æ”¾ï¼Œå›è°ƒx,yè¡¨ç¤ºç¼©æ”¾åˆå§‹ä¸­å¿ƒç‚¹ï¼Œzä¸ºå½“å‰ç¼©æ”¾å¢é‡
         /// </summary>
         OnScale,
         /// <summary>
-        /// ÊÖÖ¸Ì§ÆğÊ±ÈÔÎ´³¤°´×´Ì¬£¬ºÍOnClick²»ÄÜÍ¬Ê±ÏìÓ¦
+        /// æ‰‹æŒ‡æŠ¬èµ·æ—¶ä»æœªé•¿æŒ‰çŠ¶æ€ï¼Œå’ŒOnClickä¸èƒ½åŒæ—¶å“åº”
         /// </summary>
         OnEndLongPress,
     }
 
     /// <summary>
-    /// ÊäÈë¿ØÖÆ¹ÜÀíÆ÷£¬ Ö§³ÖÊó±ê¡¢µã´¥µÄ°ËÖÖµ¥µã²Ù×÷¼°Ëõ·Å
+    /// è¾“å…¥æ§åˆ¶ç®¡ç†å™¨ï¼Œ æ”¯æŒé¼ æ ‡ã€ç‚¹è§¦çš„å…«ç§å•ç‚¹æ“ä½œåŠç¼©æ”¾
     /// </summary>
     public class InputManager : Manager<InputManager>
     {
         public new const string NAME = "InputManager";
 
         /// <summary>
-        /// ÒÆ¶¯ÈİÈÌ¶È£ºÒÆ¶¯³¬¹ı¶àÉÙËã¿ªÊ¼»¬¶¯
+        /// ç§»åŠ¨å®¹å¿åº¦ï¼šç§»åŠ¨è¶…è¿‡å¤šå°‘ç®—å¼€å§‹æ»‘åŠ¨
         /// </summary>
         public readonly float m_moveTolerace = 10f;
         /// <summary>
-        /// ³¤°´¼ä¸ô£º°´×¡¶à¾Ã¿ªÊ¼´¦Àí³É³¤°´ÊÂ¼ş
+        /// é•¿æŒ‰é—´éš”ï¼šæŒ‰ä½å¤šä¹…å¼€å§‹å¤„ç†æˆé•¿æŒ‰äº‹ä»¶
         /// </summary>
         public readonly float m_longPressSpan = 0.5f;
 
@@ -86,7 +86,7 @@ namespace GEngine.Managers
         #endregion
 
         /// <summary>
-        /// ÊÇ·ñ¿ÉÓÃ
+        /// æ˜¯å¦å¯ç”¨
         /// </summary>
         public bool IsActive
         {
@@ -98,7 +98,7 @@ namespace GEngine.Managers
             }
         }
         /// <summary>
-        /// ÊÇ·ñµã»÷ÔÚuiÉÏ
+        /// æ˜¯å¦ç‚¹å‡»åœ¨uiä¸Š
         /// </summary>
         public bool IsTouchOnUI
         {

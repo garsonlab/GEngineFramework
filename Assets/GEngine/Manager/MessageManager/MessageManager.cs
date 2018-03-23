@@ -27,11 +27,11 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ×¢²áÏûÏ¢¼àÌıÀàĞÍ
+        /// æ³¨å†Œæ¶ˆæ¯ç›‘å¬ç±»å‹
         /// </summary>
-        /// <param name="messageType">ÏûÏ¢ÀàĞÍ</param>
-        /// <param name="handler">»Øµ÷·½·¨</param>
-        /// <param name="priority">ÓÅÏÈ¼¶£¬ÖµÔ½´óÓÅÏÈ¼¶Ô½¸ß</param>
+        /// <param name="messageType">æ¶ˆæ¯ç±»å‹</param>
+        /// <param name="handler">å›è°ƒæ–¹æ³•</param>
+        /// <param name="priority">ä¼˜å…ˆçº§ï¼Œå€¼è¶Šå¤§ä¼˜å…ˆçº§è¶Šé«˜</param>
         public MessageData RegisterMessage(int messageType, MessageHandler handler, int priority = 0)
         {
             MessageSet set;
@@ -50,10 +50,10 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// É¾³ı¸Ã¼àÌıÀàĞÍÏÂËùÓĞµÄ¸Ã»Øµ÷·½·¨
+        /// åˆ é™¤è¯¥ç›‘å¬ç±»å‹ä¸‹æ‰€æœ‰çš„è¯¥å›è°ƒæ–¹æ³•
         /// </summary>
-        /// <param name="messageType">ÏûÏ¢ÀàĞÍ</param>
-        /// <param name="handler">»Øµ÷·½·¨</param>
+        /// <param name="messageType">æ¶ˆæ¯ç±»å‹</param>
+        /// <param name="handler">å›è°ƒæ–¹æ³•</param>
         public void RemoveMessage(int messageType, MessageHandler handler)
         {
             MessageSet set;
@@ -64,7 +64,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ÒÆ³ı¸Ã¼àÌıÏÂµÄËùÓĞ·½·¨
+        /// ç§»é™¤è¯¥ç›‘å¬ä¸‹çš„æ‰€æœ‰æ–¹æ³•
         /// </summary>
         /// <param name="messageType"></param>
         public void RemoveMessages(int messageType)
@@ -78,7 +78,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// Ö´ĞĞµ÷ÓÃ
+        /// æ‰§è¡Œè°ƒç”¨
         /// </summary>
         /// <param name="messageType"></param>
         /// <param name="args"></param>

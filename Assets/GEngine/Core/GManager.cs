@@ -13,7 +13,7 @@ using GEngine.Patterns;
 namespace GEngine.Core
 {
     /// <summary>
-    /// ¹ÜÀíËùÓĞ»ù´¡¹¤¾ßÀà
+    /// ç®¡ç†æ‰€æœ‰åŸºç¡€å·¥å…·ç±»
     /// </summary>
     public class GManager : IGManager
     {

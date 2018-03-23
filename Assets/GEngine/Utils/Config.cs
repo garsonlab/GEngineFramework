@@ -13,31 +13,31 @@ namespace GEngine
     {
 
         /// <summary>
-        /// Éè¼Æ³ß´ç¿í¶È
+        /// è®¾è®¡å°ºå¯¸å®½åº¦
         /// </summary>
         public const float DesignWidth = 720f;
         /// <summary>
-        /// Éè¼Æ³ß´ç³¤¶È
+        /// è®¾è®¡å°ºå¯¸é•¿åº¦
         /// </summary>
         public const float DesignHeight = 1280f;
         /// <summary>
-        /// Ê¹ÓÃBundleÄ£Ê½
+        /// ä½¿ç”¨Bundleæ¨¡å¼
         /// </summary>
         public static bool BundleMode = false;
         /// <summary>
-        /// ÍøÂç¼ÓÃÜ
+        /// ç½‘ç»œåŠ å¯†
         /// </summary>
         public const bool NetEncrypt = false;
         /// <summary>
-        /// 2DÉùÒô²¥·ÅÆ÷×î´óÍ¬Ê±´æÔÚ¸öÊı
+        /// 2Då£°éŸ³æ’­æ”¾å™¨æœ€å¤§åŒæ—¶å­˜åœ¨ä¸ªæ•°
         /// </summary>
         public const int Audio2DMaxPile = 5;
         /// <summary>
-        /// Bundle¹ØÏµ±íÃû
+        /// Bundleå…³ç³»è¡¨å
         /// </summary>
         public const string BundleManifest = "BundleManifest.manifest";
         /// <summary>
-        /// ÓïÑÔ°ü
+        /// è¯­è¨€åŒ…
         /// </summary>
         public static LaunghType LaunghType = LaunghType.Zh_CN;
     }

@@ -15,16 +15,16 @@ namespace GEngine.Patterns
     public abstract class Manager
     {
         /// <summary>
-        /// Ãû³Æ£¬±ØĞëÓÉ×ÓÀà¸²¸Ç
+        /// åç§°ï¼Œå¿…é¡»ç”±å­ç±»è¦†ç›–
         /// </summary>
         public const string NAME = "Manager";
 
         /// <summary>
-        /// ¸Õ±»×¢²áÊ±µ÷ÓÃ
+        /// åˆšè¢«æ³¨å†Œæ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRegister() { }
         /// <summary>
-        /// ÒÆ³ıÊ±µ÷ÓÃ
+        /// ç§»é™¤æ—¶è°ƒç”¨
         /// </summary>
         public virtual void OnRemove() { }
 

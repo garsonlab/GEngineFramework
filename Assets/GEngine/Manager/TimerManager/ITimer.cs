@@ -12,58 +12,58 @@ namespace GEngine.Managers
     public interface ITimer
     {
         /// <summary>
-        /// ÑÓÊ±µ÷ÓÃ
+        /// å»¶æ—¶è°ƒç”¨
         /// </summary>
-        /// <param name="delay">ÑÓ³ÙÊ±¼ä</param>
-        /// <param name="handler">»Øµ÷º¯Êı</param>
-        /// <param name="parm">»Øµ÷²ÎÊı</param>
+        /// <param name="delay">å»¶è¿Ÿæ—¶é—´</param>
+        /// <param name="handler">å›è°ƒå‡½æ•°</param>
+        /// <param name="parm">å›è°ƒå‚æ•°</param>
         /// <returns></returns>
         TimerData DelayCall(float delay, TimerHandler handler, object parm = null);
         /// <summary>
-        /// ¼ä¸ôµ÷ÓÃ
+        /// é—´éš”è°ƒç”¨
         /// </summary>
-        /// <param name="times">µ÷ÓÃ´ÎÊı£¬-1±íÊ¾ÎŞ¾¡Ñ­»·µ÷ÓÃ</param>
-        /// <param name="interval">µ÷ÓÃ¼ä¸ô</param>
-        /// <param name="handler">»Øµ÷º¯Êı</param>
-        /// <param name="parm">»Øµ÷²ÎÊı</param>
+        /// <param name="times">è°ƒç”¨æ¬¡æ•°ï¼Œ-1è¡¨ç¤ºæ— å°½å¾ªç¯è°ƒç”¨</param>
+        /// <param name="interval">è°ƒç”¨é—´éš”</param>
+        /// <param name="handler">å›è°ƒå‡½æ•°</param>
+        /// <param name="parm">å›è°ƒå‚æ•°</param>
         /// <returns></returns>
         TimerData IntervalCall(int times, float interval, TimerHandler handler, object parm = null);
         /// <summary>
-        /// ÑÓÊ±¼ä¸ô»Øµ÷
+        /// å»¶æ—¶é—´éš”å›è°ƒ
         /// </summary>
-        /// <param name="times">µ÷ÓÃ´ÎÊı£¬-1±íÊ¾ÎŞ¾¡Ñ­»·µ÷ÓÃ</param>
-        /// <param name="delay">ÑÓ³ÙÊ±¼ä</param>
-        /// <param name="interval">µ÷ÓÃ¼ä¸ô</param>
-        /// <param name="handler">»Øµ÷º¯Êı</param>
-        /// <param name="parm">»Øµ÷²ÎÊı</param>
+        /// <param name="times">è°ƒç”¨æ¬¡æ•°ï¼Œ-1è¡¨ç¤ºæ— å°½å¾ªç¯è°ƒç”¨</param>
+        /// <param name="delay">å»¶è¿Ÿæ—¶é—´</param>
+        /// <param name="interval">è°ƒç”¨é—´éš”</param>
+        /// <param name="handler">å›è°ƒå‡½æ•°</param>
+        /// <param name="parm">å›è°ƒå‚æ•°</param>
         /// <returns></returns>
         TimerData IntervalDelayCall(int times, float delay, float interval, TimerHandler handler, object parm = null);
         /// <summary>
-        /// ÖØ¸´µ÷ÓÃ
+        /// é‡å¤è°ƒç”¨
         /// </summary>
-        /// <param name="times">µ÷ÓÃ´ÎÊı£¬-1±íÊ¾ÎŞ¾¡Ñ­»·µ÷ÓÃ</param>
-        /// <param name="delay">ÑÓ³ÙÊ±¼ä</param>
-        /// <param name="interval">µ÷ÓÃ¼ä¸ô</param>
-        /// <param name="ignoreTimeScale">ÊÇ·ñºöÂÔÊ±¼äËõ·Å</param>
-        /// <param name="handler">»Øµ÷º¯Êı</param>
-        /// <param name="parm">»Øµ÷²ÎÊı</param>
+        /// <param name="times">è°ƒç”¨æ¬¡æ•°ï¼Œ-1è¡¨ç¤ºæ— å°½å¾ªç¯è°ƒç”¨</param>
+        /// <param name="delay">å»¶è¿Ÿæ—¶é—´</param>
+        /// <param name="interval">è°ƒç”¨é—´éš”</param>
+        /// <param name="ignoreTimeScale">æ˜¯å¦å¿½ç•¥æ—¶é—´ç¼©æ”¾</param>
+        /// <param name="handler">å›è°ƒå‡½æ•°</param>
+        /// <param name="parm">å›è°ƒå‚æ•°</param>
         /// <returns></returns>
         TimerData RepeatedCall(int times, float delay, float interval, bool ignoreTimeScale, TimerHandler handler, object parm = null);
         /// <summary>
-        /// ÉèÖÃÔİÍ£
+        /// è®¾ç½®æš‚åœ
         /// </summary>
-        /// <param name="timerId">»Øµ÷id</param>
-        /// <param name="pause">ÊÇ·ñÔİÍ£</param>
+        /// <param name="timerId">å›è°ƒid</param>
+        /// <param name="pause">æ˜¯å¦æš‚åœ</param>
         void SetPause(uint timerId, bool pause);
         /// <summary>
-        /// È¡Ïû»Øµ÷
+        /// å–æ¶ˆå›è°ƒ
         /// </summary>
-        /// <param name="timerId">»Øµ÷id</param>
+        /// <param name="timerId">å›è°ƒid</param>
         void CancelCallback(uint timerId);
         /// <summary>
-        /// »ñÈ¡¼ÆÊ±Æ÷Êı¾İ
+        /// è·å–è®¡æ—¶å™¨æ•°æ®
         /// </summary>
-        /// <param name="timerId">»Øµ÷id</param>
+        /// <param name="timerId">å›è°ƒid</param>
         /// <returns></returns>
         TimerData GetTimerData(uint timerId);
     }

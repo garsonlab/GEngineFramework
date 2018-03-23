@@ -16,7 +16,7 @@ using Object = UnityEngine.Object;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// ×ÊÔ´¼ÓÔØ¹ÜÀí
+    /// èµ„æºåŠ è½½ç®¡ç†
     /// </summary>
     public class ResourceManager : Manager
     {
@@ -96,15 +96,15 @@ namespace GEngine.Managers
 
             if (Config.BundleMode)
             {
-                #region Bundle¼ÓÔØ
-                if (!FileManager.GetBundlePath(assetPath, ref bundlePath))//²»´æÔÚ¸Ãbundle
+                #region BundleåŠ è½½
+                if (!FileManager.GetBundlePath(assetPath, ref bundlePath))//ä¸å­˜åœ¨è¯¥bundle
                     return null;
 
                 if (m_assetDic.TryGetValue(bundlePath, out loader))
                 {
                     if (!isSync && !loader.isDone)
                     {
-                        //µ±Ç°ÒÑÓĞÎ´Íê³ÉµÄÒì²½¼ÓÔØÇÒµ±Ç°»»³ÉÍ¬²½¼ÓÔØ
+                        //å½“å‰å·²æœ‰æœªå®Œæˆçš„å¼‚æ­¥åŠ è½½ä¸”å½“å‰æ¢æˆåŒæ­¥åŠ è½½
                         if (m_waitList.Contains(loader))
                             m_waitList.Remove(loader);
                         m_assetDic.Remove(bundlePath);
@@ -143,12 +143,12 @@ namespace GEngine.Managers
             }
             else
             {
-                #region Resources¼ÓÔØ»òEditor¼ÓÔØ
+                #region ResourcesåŠ è½½æˆ–EditoråŠ è½½
                 if (m_assetDic.TryGetValue(assetPath, out loader))
                 {
                     if (!isSync && !loader.isDone)
                     {
-                        //µ±Ç°ÒÑÓĞÎ´Íê³ÉµÄÒì²½¼ÓÔØÇÒµ±Ç°»»³ÉÍ¬²½¼ÓÔØ
+                        //å½“å‰å·²æœ‰æœªå®Œæˆçš„å¼‚æ­¥åŠ è½½ä¸”å½“å‰æ¢æˆåŒæ­¥åŠ è½½
                         if (m_waitList.Contains(loader))
                         {
                             m_waitList.Remove(loader);
@@ -168,7 +168,7 @@ namespace GEngine.Managers
                         asset = new AssetLoader(assetPath);
                     asset.SetManager(this);
 
-                    if (deleteInLoad)//×ªÒÆÍê³É»Øµ÷
+                    if (deleteInLoad)//è½¬ç§»å®Œæˆå›è°ƒ
                         asset.CopyCompleteEvents(loader);
 
                     loader = asset;
@@ -243,15 +243,15 @@ namespace GEngine.Managers
             m_startCoroutine(loader.SyncLoad());
         }
 
-        //½ö¹©AssetLoader¼ÓÔØÍê³É×ÔĞĞµ÷ÓÃ
+        //ä»…ä¾›AssetLoaderåŠ è½½å®Œæˆè‡ªè¡Œè°ƒç”¨
         internal void OnLoadComplete(AssetLoader loader)
         {
-            if (m_loadingList.Contains(loader))//´Ó¼ÓÔØÁĞ±íÖĞÒÆ³ı
+            if (m_loadingList.Contains(loader))//ä»åŠ è½½åˆ—è¡¨ä¸­ç§»é™¤
             {
                 m_loadingList.Remove(loader);
                 LoadNext();
             }
-            if (m_deleteList.Contains(loader)) //´æÔÚÒÑÉ¾³ıÁĞ±íÖĞ
+            if (m_deleteList.Contains(loader)) //å­˜åœ¨å·²åˆ é™¤åˆ—è¡¨ä¸­
             {
                 m_deleteList.Remove(loader);
                 loader.UnLoad(true);
@@ -260,7 +260,7 @@ namespace GEngine.Managers
                 loader.InvokeComplete();
         }
 
-        //½ö¹©Bundle¼ÓÔØÆ÷µ÷ÓÃ¼ÓÔØËùĞèÒÀÀµ
+        //ä»…ä¾›BundleåŠ è½½å™¨è°ƒç”¨åŠ è½½æ‰€éœ€ä¾èµ–
         internal void LoadAllDependencies(string assetPath)
         {
             List<JsonNode> deps = FileManager.GetDependencies(assetPath);
@@ -271,7 +271,7 @@ namespace GEngine.Managers
                     loader.RefSet(1);
             }
         }
-        //È¡ÏûÒÀÀµµÄ¼ÓÔØ
+        //å–æ¶ˆä¾èµ–çš„åŠ è½½
         internal void UnLoadAllDependencies(string assetPath)
         {
             List<JsonNode> deps = FileManager.GetDependencies(assetPath);
@@ -287,7 +287,7 @@ namespace GEngine.Managers
             }
         }
 
-        //¼ÓÔØBundleÊı¾İÎÄ¼ş
+        //åŠ è½½Bundleæ•°æ®æ–‡ä»¶
         void LoadManifest()
         {
             if(!Config.BundleMode)

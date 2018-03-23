@@ -4,9 +4,9 @@
  * FileName: NetworkManager
  * Date    : 2018/03/06
  * Version : v1.0
- * Describe: TODO：区分不同的频道
- *              消息解析
- *              消息加密
+ * Describe: TODO锛氬尯鍒嗕笉鍚岀殑棰戦亾
+ *              娑堟伅瑙ｆ瀽
+ *              娑堟伅鍔犲瘑
  */
 
 using System.Collections.Generic;
@@ -72,7 +72,7 @@ namespace GEngine.Managers
             NetworkAgent agent;
             if (m_channelMap.TryGetValue(channelType, out agent))
             {
-                //TODO 消息加密
+                //TODO 娑堟伅鍔犲瘑
                 agent.Send(bytes);
             }
         }
@@ -122,7 +122,7 @@ namespace GEngine.Managers
             NetMessageDispatcher dispatcher;
             if (m_listeners.TryGetValue(msgType, out dispatcher))
             {
-                //ToDO 消息解密
+                //ToDO 娑堟伅瑙ｅ瘑
                 dispatcher.Dispatchs(bytes);
             }
         }

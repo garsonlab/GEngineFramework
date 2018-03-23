@@ -4,12 +4,12 @@
  * FileName: WebRequestAgent
  * Date    : 2018/03/15
  * Version : v1.0
- * Describe: ʹ��HttpЭ�飬֧�ֶϵ����������Ƿ������bundle��С�Ļ�����
- *              ������һ���������Ѷϵ�������Ϊbundle��������������ֻҪ���bundle
- *              û������ʹ������0�ֽڿ�ʼ��Ҳ���˷��������ܸ��õİ汾���ơ�
- *              �ֽڵĶϵ�������Ҫ�ļ�ͬ�������ð汾���ƣ���Ҫ��һ���ļ���¼���ơ�
+ * Describe: 使用Http协议，支持断点续传。但是发现如果bundle较小的话不如
+ *              不做这一步续传，把断点续传改为bundle的整体续传，即只要这个bundle
+ *              没下载完就从这个的0字节开始，也不浪费流量且能更好的版本控制。
+ *              字节的断点续传需要文件同名，不好版本控制，需要多一个文件记录控制。
  *              
- * ���ڿ��Կ��� WWW �� WebClient
+ * 后期可以考虑 WWW 和 WebClient
  */
 
 using System;
@@ -21,7 +21,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// HTTP�����������
+    /// HTTP网络请求代理
     /// </summary>
     public class WebRequestAgent
     {

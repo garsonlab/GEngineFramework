@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GEngine
 {
     /// <summary>
-    /// GameObject »º´æ³Ø
+    /// GameObject ç¼“å­˜æ± 
     /// </summary>
     public class GameObjectPool
     {
@@ -27,12 +27,12 @@ namespace GEngine
 
         #region Public Methods
         /// <summary>
-        /// ¹¹Ôìº¯Êı£¬GameObject»º´æ³Ø
+        /// æ„é€ å‡½æ•°ï¼ŒGameObjectç¼“å­˜æ± 
         /// </summary>
-        /// <param name="name">»º´æ³ØÃû³Æ</param>
-        /// <param name="prefab">Ô¤ÖÆÌå£¬×öÎªÄ¸°å¸´ÖÆ</param>
-        /// <param name="maxSize">×î´óÉú³ÉÊıÁ¿</param>
-        /// <param name="root">±£´æ¸ù½Úµã</param>
+        /// <param name="name">ç¼“å­˜æ± åç§°</param>
+        /// <param name="prefab">é¢„åˆ¶ä½“ï¼Œåšä¸ºæ¯æ¿å¤åˆ¶</param>
+        /// <param name="maxSize">æœ€å¤§ç”Ÿæˆæ•°é‡</param>
+        /// <param name="root">ä¿å­˜æ ¹èŠ‚ç‚¹</param>
         public GameObjectPool(string name, GameObject prefab, int maxSize = int.MaxValue, Transform root = null)
         {
             m_pool = new ObjectPool<GameObject>(Creater, Getter, Releaser, Clearer);
@@ -43,7 +43,7 @@ namespace GEngine
         }
 
         /// <summary>
-        /// »ñÈ¡
+        /// è·å–
         /// </summary>
         /// <returns></returns>
         public GameObject Get()
@@ -69,10 +69,10 @@ namespace GEngine
             return m_pool.Get();
         }
         /// <summary>
-        /// ÊÍ·Å
+        /// é‡Šæ”¾
         /// </summary>
-        /// <param name="name">»º´æ³ØÃû³Æ</param>
-        /// <param name="obj">¶ÔÏó</param>
+        /// <param name="name">ç¼“å­˜æ± åç§°</param>
+        /// <param name="obj">å¯¹è±¡</param>
         public void Release(string name, GameObject obj)
         {
             if (!m_name.Equals(name))
@@ -83,7 +83,7 @@ namespace GEngine
             m_pool.Release(obj);
         }
         /// <summary>
-        /// Çå¿Õ»º´æ³Ø
+        /// æ¸…ç©ºç¼“å­˜æ± 
         /// </summary>
         public void Clear()
         {

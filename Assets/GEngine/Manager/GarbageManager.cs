@@ -13,7 +13,7 @@ using GEngine.Patterns;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// 垃圾回收器，自动调用，可取消手动调用
+    /// 鍨冨溇鍥炴敹鍣紝鑷姩璋冪敤锛屽彲鍙栨秷鎵嬪姩璋冪敤
     /// </summary>
     public class GarbageManager : Manager<GarbageManager>
     {

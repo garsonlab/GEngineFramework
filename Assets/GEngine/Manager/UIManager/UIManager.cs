@@ -16,7 +16,7 @@ using UnityEngine.UI;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// UI¹ÜÀíÆ÷
+    /// UIç®¡ç†å™¨
     /// </summary>
     public class UIManager : Manager<UIManager>
     {
@@ -178,7 +178,7 @@ namespace GEngine.Managers
             uiCamera.gameObject.layer = LayerMask.NameToLayer("UI");
             uiCamera.transform.SetParent(uiRoot);
             uiCamera.transform.localPosition = new Vector3(0, 0, -100);
-            uiCamera.clearFlags = CameraClearFlags.Skybox;//ÒÔºó»»³ÉDep
+            uiCamera.clearFlags = CameraClearFlags.Skybox;//ä»¥åæ¢æˆDep
             uiCamera.orthographic = true;
             uiCamera.nearClipPlane = -50;
             uiCamera.farClipPlane = 200;

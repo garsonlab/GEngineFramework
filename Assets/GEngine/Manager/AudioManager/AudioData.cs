@@ -13,9 +13,9 @@ namespace GEngine.Managers
     {
         public enum AudioType
         {
-            Backageground,//±³¾°Òô
-            Effect2D,//2DÉùÒô
-            Effect3D,//3DÉùÒô
+            Backageground,//èƒŒæ™¯éŸ³
+            Effect2D,//2Då£°éŸ³
+            Effect3D,//3Då£°éŸ³
         }
 
 

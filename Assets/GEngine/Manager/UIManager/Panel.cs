@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// Ãæ°å»ùÀà
+    /// é¢æ¿åŸºç±»
     /// </summary>
     public abstract class Panel : IPanel
     {
@@ -72,7 +72,7 @@ namespace GEngine.Managers
             }
         }
         /// <summary>
-        /// ³õÊ¼»¯×é¼şĞÅÏ¢
+        /// åˆå§‹åŒ–ç»„ä»¶ä¿¡æ¯
         /// </summary>
         protected virtual void Init()
         {
@@ -89,7 +89,7 @@ namespace GEngine.Managers
             
         }
         /// <summary>
-        /// ÏÔÊ¾£¬²¥·Å¶¯Ğ§
+        /// æ˜¾ç¤ºï¼Œæ’­æ”¾åŠ¨æ•ˆ
         /// </summary>
         /// <param name="parm"></param>
         protected virtual void OnShow(object parm)
@@ -109,7 +109,7 @@ namespace GEngine.Managers
             }
         }
         /// <summary>
-        /// ¹Ø±Õ¹ı³Ì£¬¿É×ö¶¯Ğ§
+        /// å…³é—­è¿‡ç¨‹ï¼Œå¯åšåŠ¨æ•ˆ
         /// </summary>
         /// <param name="callback"></param>
         protected virtual void OnClose()
@@ -131,7 +131,7 @@ namespace GEngine.Managers
             }
         }
         /// <summary>
-        /// Ïú»Ù¹ı³Ì£¬¹Ø±ÕÆäËûÄÚÈİ
+        /// é”€æ¯è¿‡ç¨‹ï¼Œå…³é—­å…¶ä»–å†…å®¹
         /// </summary>
         private void OnDestroy()
         {
@@ -140,10 +140,10 @@ namespace GEngine.Managers
             ResourceManager.Instance.Unload(assetPath, true);
         }
 
-        //¼ÓÔØ½áÊø
+        //åŠ è½½ç»“æŸ
         private void OnLoadEnd(Object obj, object parm, Callback_0 callback)
         {
-            if (m_panelState == PanelState.Destroy)//¸Õ´ò¿ª¾ÍÒªÏú»Ù
+            if (m_panelState == PanelState.Destroy)//åˆšæ‰“å¼€å°±è¦é”€æ¯
             {
                 Debug.Log("Destroy on Load End");
             }

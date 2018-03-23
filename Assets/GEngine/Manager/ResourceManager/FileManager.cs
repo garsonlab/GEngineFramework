@@ -17,7 +17,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// ÎÄ¼ş¹ÜÀíÆ÷£¬Ö»½ÓÊÜ×ÊÔ´¹ÜÀíÆ÷³õÊ¼»¯µ÷ÓÃ
+    /// æ–‡ä»¶ç®¡ç†å™¨ï¼Œåªæ¥å—èµ„æºç®¡ç†å™¨åˆå§‹åŒ–è°ƒç”¨
     /// </summary>
     public class FileManager
     {
@@ -40,7 +40,7 @@ namespace GEngine.Managers
             m_version = "0";
         }
         /// <summary>
-        /// ³õÊ¼»¯Manifest
+        /// åˆå§‹åŒ–Manifest
         /// </summary>
         /// <param name="menifestBytes"></param>
         public static void LoadMenifest(byte[] menifestBytes)
@@ -62,7 +62,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ¸ù¾İAssetÂ·¾¶·µ»ØÊÇ·ñ´æÔÚ¸Ãbundle¼°bundleÂ·¾¶
+        /// æ ¹æ®Assetè·¯å¾„è¿”å›æ˜¯å¦å­˜åœ¨è¯¥bundleåŠbundleè·¯å¾„
         /// </summary>
         /// <param name="assetPath">eg.Asset/Resources/...</param>
         /// <param name="bundlPath"></param>
@@ -93,7 +93,7 @@ namespace GEngine.Managers
 
 
         /// <summary>
-        /// ¸ù¾İ×ÊÔ´Â·¾¶»ñÈ¡Êµ¼ÊÂ·¾¶£¬ÓÅÏÈpersistent
+        /// æ ¹æ®èµ„æºè·¯å¾„è·å–å®é™…è·¯å¾„ï¼Œä¼˜å…ˆpersistent
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -107,10 +107,10 @@ namespace GEngine.Managers
 
 
         /// <summary>
-        /// »ñÈ¡ResourcesÎÄ¼ş¼ĞÂ·¾¶
+        /// è·å–Resourcesæ–‡ä»¶å¤¹è·¯å¾„
         /// </summary>
         /// <param name="path"></param>
-        /// <returns>¿Õ±íÊ¾²»ÔÚResourceÄ¿Â¼ÏÂ</returns>
+        /// <returns>ç©ºè¡¨ç¤ºä¸åœ¨Resourceç›®å½•ä¸‹</returns>
         public static bool GetResourcePath(string path, ref string resPath)
         {
             if (path.Contains("Resources/"))
@@ -122,7 +122,7 @@ namespace GEngine.Managers
             return false;
         }
         /// <summary>
-        /// »ñÈ¡ÒÀÀµÎÄ¼ş
+        /// è·å–ä¾èµ–æ–‡ä»¶
         /// </summary>
         /// <param name="assetPath"></param>
         /// <returns></returns>
@@ -137,7 +137,7 @@ namespace GEngine.Managers
             return new List<JsonNode>();
         }
         /// <summary>
-        /// »ñÈ¡Md5Öµ
+        /// è·å–Md5å€¼
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -148,7 +148,7 @@ namespace GEngine.Managers
             return ToHexString(bytes);
         }
         /// <summary>
-        /// »ñÈ¡Md5Öµ
+        /// è·å–Md5å€¼
         /// </summary>
         /// <param name="bytes"></param>
         /// <returns></returns>
@@ -160,7 +160,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// »ñÈ¡ÎÄ¼şHashÖµ
+        /// è·å–æ–‡ä»¶Hashå€¼
         /// </summary>
         /// <param name="filePath"></param>
         /// <param name="length"></param>
@@ -178,7 +178,7 @@ namespace GEngine.Managers
             return ToHexString(bytes);
         }
         /// <summary>
-        /// »ñÈ¡ÎÄ¼şHashÖµ
+        /// è·å–æ–‡ä»¶Hashå€¼
         /// </summary>
         /// <param name="bytes"></param>
         /// <param name="length"></param>
@@ -191,7 +191,7 @@ namespace GEngine.Managers
             return ToHexString(hashBytes);
         }
         /// <summary>
-        /// ×ª»»16½øÖÆ
+        /// è½¬æ¢16è¿›åˆ¶
         /// </summary>
         /// <param name="bytes"></param>
         /// <returns></returns>
@@ -211,7 +211,7 @@ namespace GEngine.Managers
             return hexString;
         }
         /// <summary>
-        /// ×ª»»×Ö½Úµ¥Î»
+        /// è½¬æ¢å­—èŠ‚å•ä½
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
@@ -229,7 +229,7 @@ namespace GEngine.Managers
             return Math.Round(size, 2) + units[i];
         }
         /// <summary>
-        /// ¼ì²â²¢´´½¨Ä¿Â¼
+        /// æ£€æµ‹å¹¶åˆ›å»ºç›®å½•
         /// </summary>
         /// <param name="folderPath"></param>
         public static void CreateDirectory(string folderPath)
@@ -238,7 +238,7 @@ namespace GEngine.Managers
                 Directory.CreateDirectory(folderPath);
         }
         /// <summary>
-        /// É¾³ıÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
+        /// åˆ é™¤ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
         /// </summary>
         /// <param name="folderPath"></param>
         public static void ClearFiles(string folderPath)

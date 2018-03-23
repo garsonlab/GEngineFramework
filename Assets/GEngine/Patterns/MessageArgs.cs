@@ -30,20 +30,20 @@ namespace GEngine.Patterns
 
         #region Public
         /// <summary>
-        /// ÏûÏ¢µÄÀàĞÍ
+        /// æ¶ˆæ¯çš„ç±»å‹
         /// </summary>
         public int Type { get { return m_type; }}
         /// <summary>
-        /// ÏûÏ¢²ÎÊı
+        /// æ¶ˆæ¯å‚æ•°
         /// </summary>
         public object Body { get { return m_body; }}
         /// <summary>
-        /// ·¢ËÍÕß
+        /// å‘é€è€…
         /// </summary>
         public object Sender { get { return m_sender; } }
 
         /// <summary>
-        /// ×ª»»body
+        /// è½¬æ¢body
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
@@ -52,7 +52,7 @@ namespace GEngine.Patterns
             return (T) m_body;
         }
         /// <summary>
-        /// ×ª»»sender
+        /// è½¬æ¢sender
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>

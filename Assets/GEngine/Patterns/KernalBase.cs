@@ -16,7 +16,7 @@ using UnityEngine;
 namespace GEngine.Patterns
 {
     /// <summary>
-    /// ¿ò¼Ü»ù´¡Àà£¬ÓÃÓÚÏûÏ¢Í¨Öª¼°ÄÚÈİ»ñÈ¡
+    /// æ¡†æ¶åŸºç¡€ç±»ï¼Œç”¨äºæ¶ˆæ¯é€šçŸ¥åŠå†…å®¹è·å–
     /// </summary>
     public class KernalBase : IDispatcher
     {
@@ -69,7 +69,7 @@ namespace GEngine.Patterns
         }
 
         /// <summary>
-        /// ÔÚ½çÃæÒÆ³ıÊ±½öÓĞ¹ÜÀíµ÷ÓÃ
+        /// åœ¨ç•Œé¢ç§»é™¤æ—¶ä»…æœ‰ç®¡ç†è°ƒç”¨
         /// </summary>
         public void RemoveAllMessages()
         {
@@ -118,7 +118,7 @@ namespace GEngine.Patterns
 
         #region Accessors
         /// <summary>
-        /// ÏûÏ¢¹ÜÀíÆ÷
+        /// æ¶ˆæ¯ç®¡ç†å™¨
         /// </summary>
         public MessageManager MessageManager
         {
@@ -130,7 +130,7 @@ namespace GEngine.Patterns
             }
         }
         /// <summary>
-        /// ¼ÆÊ±Æ÷
+        /// è®¡æ—¶å™¨
         /// </summary>
         public TimerManager TimerManager
         {
@@ -142,7 +142,7 @@ namespace GEngine.Patterns
             }
         }
         /// <summary>
-        /// ×ÊÔ´¹ÜÀíÆ÷
+        /// èµ„æºç®¡ç†å™¨
         /// </summary>
         public ResourceManager ResourceManager
         {
@@ -154,7 +154,7 @@ namespace GEngine.Patterns
             }
         }
         /// <summary>
-        /// ²Ù×÷¹ÜÀíÆ÷
+        /// æ“ä½œç®¡ç†å™¨
         /// </summary>
         public InputManager InputManager
         {
@@ -167,7 +167,7 @@ namespace GEngine.Patterns
         }
 
         /// <summary>
-        /// UI¹ÜÀíÆ÷
+        /// UIç®¡ç†å™¨
         /// </summary>
         public UIManager UIManager
         {
@@ -180,7 +180,7 @@ namespace GEngine.Patterns
         }
 
         /// <summary>
-        /// Ğ­³Ìµ÷ÓÃ
+        /// åç¨‹è°ƒç”¨
         /// </summary>
         public StartCoroutineHandler StartCoroutine
         {

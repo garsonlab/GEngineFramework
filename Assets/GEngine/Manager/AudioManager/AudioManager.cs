@@ -15,7 +15,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// ÉùÒô¹ÜÀí
+    /// å£°éŸ³ç®¡ç†
     /// </summary>
     public class AudioManager : Manager
     {
@@ -87,8 +87,8 @@ namespace GEngine.Managers
 
             if (audio == null)
             {
-                //TODO ¸ù¾İ×Ô¶¨¹æÔòÑ¡ÔñÕıÔÚ²¥·ÅµÄÌæµô
-                throw new Exception("µ±Ç°2d²¥·Å¹æÄ£ÒÑ´ïÉèÖÃ×î´ó£¬¸ù¾İ×Ô¶¨¹æÔòÑ¡ÔñÕıÔÚ²¥·ÅµÄÌæµô");
+                //TODO æ ¹æ®è‡ªå®šè§„åˆ™é€‰æ‹©æ­£åœ¨æ’­æ”¾çš„æ›¿æ‰
+                throw new Exception("å½“å‰2dæ’­æ”¾è§„æ¨¡å·²è¾¾è®¾ç½®æœ€å¤§ï¼Œæ ¹æ®è‡ªå®šè§„åˆ™é€‰æ‹©æ­£åœ¨æ’­æ”¾çš„æ›¿æ‰");
             }
             return audio;
         }

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * GEngine Framework for Unity By Garson(https://github.com/garsonlab)
  * --------------------------------------------------
  * FileName: AssetModification

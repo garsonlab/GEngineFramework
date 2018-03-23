@@ -4,7 +4,7 @@
  * FileName: MonoManager
  * Date    : 2018/01/05
  * Version : v1.0
- * Describe: ÓÃÓÚÆôÓÃĞèÒªMonoµÄManager
+ * Describe: ç”¨äºå¯ç”¨éœ€è¦Monoçš„Manager
  */
 
 using UnityEngine;
@@ -13,9 +13,9 @@ namespace GEngine.Managers
 {
     public class MonoManager : MonoBehaviour
     {
-        //ÓÃÓÚÆôÓÃTimer,ÆäËûµÄ´ÓTimerManagerÖĞµ÷ÓÃ
+        //ç”¨äºå¯ç”¨Timer,å…¶ä»–çš„ä»TimerManagerä¸­è°ƒç”¨
         public Callback_0 onUpdate;
-        //ÓÃÓÚÆôÓÃGUI,ÆäËûµÄ´ÓGUIManagerÖĞµ÷ÓÃ
+        //ç”¨äºå¯ç”¨GUI,å…¶ä»–çš„ä»GUIManagerä¸­è°ƒç”¨
         public Callback_0 onDraw;
 
         void Start()

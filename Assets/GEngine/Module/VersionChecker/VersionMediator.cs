@@ -21,18 +21,18 @@ namespace GEngine.Modules
 
         internal void ShowNewVersion(Callback_0 downloadNewVersion)
         {
-            //Õ¹Ê¾¶Ô»°¿ò£¬ÏÂÔØ, ÌáÊ¾networkÖĞµÄwifi×´Ì¬
+            //å±•ç¤ºå¯¹è¯æ¡†ï¼Œä¸‹è½½, æç¤ºnetworkä¸­çš„wifiçŠ¶æ€
             downloadNewVersion();
         }
 
         internal void ShowNewResources(Callback_0 DownloadNewResources)
         {
-            //ÏÂÔØĞÂ×ÊÔ´
+            //ä¸‹è½½æ–°èµ„æº
         }
 
         internal void ShowNetBreak(Callback_1<MessageArgs> CheckVeison)
         {
-            //ÏÔÊ¾ÍøÂç²»¿ÉÓÃ
+            //æ˜¾ç¤ºç½‘ç»œä¸å¯ç”¨
             CheckVeison(null);
         }
     }

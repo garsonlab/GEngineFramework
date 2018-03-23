@@ -14,14 +14,14 @@ namespace GEngine.Managers
     public class InputBase
     {
         protected bool m_isTouchOnUI;
-        protected TouchStatus m_touchStatus; //×´Ì¬
-        protected Vector3 m_pointPos; //µã»÷Î»ÖÃ
-        protected Vector3 m_curPos; //µ±Ç°µã»÷Î»ÖÃ
-        protected Vector3 m_scaleDelata; //Ëõ·ÅÎ»ÖÃ±ÈÀı
+        protected TouchStatus m_touchStatus; //çŠ¶æ€
+        protected Vector3 m_pointPos; //ç‚¹å‡»ä½ç½®
+        protected Vector3 m_curPos; //å½“å‰ç‚¹å‡»ä½ç½®
+        protected Vector3 m_scaleDelata; //ç¼©æ”¾ä½ç½®æ¯”ä¾‹
 
-        protected InputManager m_inputManager;//ÊäÈë¹ÜÀíÀà
-        protected float m_longPressTimer; //³¤°´¼ÆÊ±Æ÷
-        protected float m_moveDis; //ÒÆ¶¯¾àÀë
+        protected InputManager m_inputManager;//è¾“å…¥ç®¡ç†ç±»
+        protected float m_longPressTimer; //é•¿æŒ‰è®¡æ—¶å™¨
+        protected float m_moveDis; //ç§»åŠ¨è·ç¦»
 
         public InputBase(InputManager manager)
         {
@@ -30,7 +30,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// Ö»ÄÜÓÉInputManagerµ÷ÓÃµÄ¸üĞÂ
+        /// åªèƒ½ç”±InputManagerè°ƒç”¨çš„æ›´æ–°
         /// </summary>
         public virtual void OnUpdate()
         {
@@ -40,7 +40,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ÉèÖÃÊÇ·ñ¿ÉÓÃ
+        /// è®¾ç½®æ˜¯å¦å¯ç”¨
         /// </summary>
         /// <param name="active"></param>
         public void SetActive(bool active)
@@ -50,7 +50,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ÊÇ·ñµã»÷ÔÚUIÉÏ
+        /// æ˜¯å¦ç‚¹å‡»åœ¨UIä¸Š
         /// </summary>
         public bool IsTouchOnUI
         {
@@ -59,7 +59,7 @@ namespace GEngine.Managers
 
 
         /// <summary>
-        /// ÖØÖÃ×´Ì¬
+        /// é‡ç½®çŠ¶æ€
         /// </summary>
         protected virtual void Reset()
         {
@@ -69,7 +69,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ¿ªÊ¼µã»÷
+        /// å¼€å§‹ç‚¹å‡»
         /// </summary>
         /// <param name="pointPos"></param>
         protected virtual void OnTouchStart(Vector3 curPos)
@@ -83,7 +83,7 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// µã»÷ÖĞ
+        /// ç‚¹å‡»ä¸­
         /// </summary>
         /// <param name="pointPos"></param>
         protected virtual void OnTouch(Vector3 curPos)
@@ -145,27 +145,27 @@ namespace GEngine.Managers
         }
 
         /// <summary>
-        /// ÊÖÊÆ×´Ì¬
+        /// æ‰‹åŠ¿çŠ¶æ€
         /// </summary>
         protected enum TouchStatus
         {
             /// <summary>
-            /// ÎŞ×´Ì¬
+            /// æ— çŠ¶æ€
             /// </summary>
             None,
 
             /// <summary>
-            /// ¸Õ¸Õ°´ÏÂ
+            /// åˆšåˆšæŒ‰ä¸‹
             /// </summary>
             Touch,
 
             /// <summary>
-            /// ³¤°´
+            /// é•¿æŒ‰
             /// </summary>
             LongPress,
 
             /// <summary>
-            /// ÒÆ¶¯
+            /// ç§»åŠ¨
             /// </summary>
             Moving,
         }

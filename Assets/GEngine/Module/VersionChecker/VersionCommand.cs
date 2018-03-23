@@ -4,13 +4,13 @@
  * FileName: VersionCommand
  * Date    : 2018/03/16
  * Version : v1.0
- * Describe: ·ÇBundleÄ£Ê½£ºÖ±½ÓÌø¹ý¼ì²â
- * BundleÄ£Ê½£º
- *      »ñÈ¡Ô¶³Ì°æ±¾
- *          ²»Í¬-¡·¼ì²âÍøÂç»·¾³wifi
- *              ´ó°æ±¾¸üÐÂ-¡·ÌáÊ¾¸üÐÂ´ó°æ±¾-¡·androidÖ±½ÓÏÂÔØ/iosÌø×ªappstore
- *              ÎÄ¼þ¸üÐÂ-¡·ÏÂÔØ
- *          ÏàÍ¬-¡·½øÈëÓÎÏ·
+ * Describe: éžBundleæ¨¡å¼ï¼šç›´æŽ¥è·³è¿‡æ£€æµ‹
+ * Bundleæ¨¡å¼ï¼š
+ *      èŽ·å–è¿œç¨‹ç‰ˆæœ¬
+ *          ä¸åŒ-ã€‹æ£€æµ‹ç½‘ç»œçŽ¯å¢ƒwifi
+ *              å¤§ç‰ˆæœ¬æ›´æ–°-ã€‹æç¤ºæ›´æ–°å¤§ç‰ˆæœ¬-ã€‹androidç›´æŽ¥ä¸‹è½½/iosè·³è½¬appstore
+ *              æ–‡ä»¶æ›´æ–°-ã€‹ä¸‹è½½
+ *          ç›¸åŒ-ã€‹è¿›å…¥æ¸¸æˆ
  */
 
 using System.Collections.Generic;
@@ -50,12 +50,12 @@ namespace GEngine.Modules
 
         private void CheckVeison(MessageArgs messageArgs)
         {
-            string remoteVersion = "1.1";//»ñÈ¡·þÎñÆ÷°æ±¾£º
+            string remoteVersion = "1.1";//èŽ·å–æœåŠ¡å™¨ç‰ˆæœ¬ï¼š
             string curVersion = FileManager.version;
             m_remoteVersion = remoteVersion;
             if (remoteVersion.Equals(curVersion))
             {
-                //µ±Ç°°æ±¾ºÍ·þÎñÆ÷°æ±¾Ò»ÖÂ
+                //å½“å‰ç‰ˆæœ¬å’ŒæœåŠ¡å™¨ç‰ˆæœ¬ä¸€è‡´
                 Debug.Log("Enter Game");
             }
             else
@@ -71,13 +71,13 @@ namespace GEngine.Modules
 
                     if (!rvm.Equals(cvm))
                     {
-                        //´ó°æ±¾²»Í¬£¬¸üÐÂÕû°ü
+                        //å¤§ç‰ˆæœ¬ä¸åŒï¼Œæ›´æ–°æ•´åŒ…
                         mediator.ShowNewVersion(DownloadNewVersion);
                     }
                     else
                     {
-                        //Ð¡°æ±¾²»Í¬£¬¸üÐÂ×ÊÔ´
-                        if (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork) //wifi»ò¾ÖÓòÍø
+                        //å°ç‰ˆæœ¬ä¸åŒï¼Œæ›´æ–°èµ„æº
+                        if (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork) //wifiæˆ–å±€åŸŸç½‘
                         {
                             DownloadNewResources();
                         }
@@ -90,13 +90,13 @@ namespace GEngine.Modules
             }
         }
 
-        //¸üÐÂÕû°ü
+        //æ›´æ–°æ•´åŒ…
         private void DownloadNewVersion()
         {
             
         }
 
-        //¸üÐÂ×ÊÔ´
+        //æ›´æ–°èµ„æº
         private void DownloadNewResources()
         {
             FileManager.CreateDirectory(m_temPath);
@@ -194,7 +194,7 @@ namespace GEngine.Modules
             m_webAgent.onDownloadSuccess = onSuccess;
             m_webAgent.onDownloadFailed = () =>
             {
-                GLog.E("ÏÂÔØmanifestÊ§°Ü£¬ÌáÊ¾ÖØÊÔ");
+                GLog.E("ä¸‹è½½manifestå¤±è´¥ï¼Œæç¤ºé‡è¯•");
             };
             StartCoroutine(m_webAgent.Download(m_remoteUrl + Config.BundleManifest, m_temPath + Config.BundleManifest,
                 length));
@@ -242,7 +242,7 @@ namespace GEngine.Modules
             m_webAgent.onDownloadSuccess = StartDown;
             m_webAgent.onDownloadFailed = () =>
             {
-                GLog.E("Down¡¡Error");
+                GLog.E("Downã€€Error");
             };
             StartDown();
         }
@@ -251,7 +251,7 @@ namespace GEngine.Modules
         {
             if (m_waitingList.Count <= 0)
             {
-                Debug.Log("ÏÂÔØÍê±Ï");
+                Debug.Log("ä¸‹è½½å®Œæ¯•");
                 m_writer.Flush();
                 m_writer.Close();
                 m_writer.Dispose();
@@ -263,7 +263,7 @@ namespace GEngine.Modules
             string name = node["BundleName"].ToString();
             string len = node["Length"].ToString();
             m_writer.Write(name +":"+node["Hash"]);
-            //mediator ½ø¶È±ä»¯
+            //mediator è¿›åº¦å˜åŒ–
             m_webAgent.onDownloadSuccess = () =>
             {
                 m_writer.Write(":1\n");

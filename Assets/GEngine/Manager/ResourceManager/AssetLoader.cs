@@ -16,7 +16,7 @@ using Object = UnityEngine.Object;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// 资源加载
+    /// 璧勬簮鍔犺浇
     /// </summary>
     public class AssetLoader : IComparable<AssetLoader>
     {
@@ -322,7 +322,7 @@ namespace GEngine.Managers
             m_manager.OnLoadComplete(this);
         }
 
-        //依赖变化
+        //渚濊禆鍙樺寲
         public void RefSet(int refAdd)
         {
             refAdd = Mathf.Clamp(refAdd, -1, 1);

@@ -13,33 +13,33 @@ namespace GEngine.Managers
 {
     public enum ChannelType
     {
-        Auth, //ÈÏÖ¤·ş
-        Zone, //Ö÷·ş
-        Battle, //Õ½¶··ş
-        Span, //¿ç·ş
+        Auth, //è®¤è¯æœ
+        Zone, //ä¸»æœ
+        Battle, //æˆ˜æ–—æœ
+        Span, //è·¨æœ
         Log,//log
     }
 
     public enum SocketState
     {
         /// <summary>
-        /// ÎŞ×´Ì¬
+        /// æ— çŠ¶æ€
         /// </summary>
         None = 0,
         /// <summary>
-        /// Á¬½ÓÖĞ
+        /// è¿æ¥ä¸­
         /// </summary>
         Connecting,
         /// <summary>
-        /// ÒÑÁ¬½Ó
+        /// å·²è¿æ¥
         /// </summary>
         Connected,
         /// <summary>
-        /// Á¬½ÓÊ§°Ü/ÍøÂçÖĞ¶Ï
+        /// è¿æ¥å¤±è´¥/ç½‘ç»œä¸­æ–­
         /// </summary>
         BreakOff,
         /// <summary>
-        /// ¶Ï¿ª
+        /// æ–­å¼€
         /// </summary>
         Dispose
     }
@@ -47,67 +47,67 @@ namespace GEngine.Managers
     public interface INetwork
     {
         /// <summary>
-        /// µ±Ç°Á¬½ÓÍ¨µÀ
+        /// å½“å‰è¿æ¥é€šé“
         /// </summary>
         ChannelType ChannelType { get; }
         /// <summary>
-        /// SocketÀàĞÍ
+        /// Socketç±»å‹
         /// </summary>
         SocketType SocketType { get; }
         /// <summary>
-        /// Á¬½ÓÀàĞÍ
+        /// è¿æ¥ç±»å‹
         /// </summary>
         ProtocolType ProtocolType { get; }
         /// <summary>
-        /// ½ÓÊÕ»º´æ´óĞ¡
+        /// æ¥æ”¶ç¼“å­˜å¤§å°
         /// </summary>
         uint BufferSize { get; set; }
         /// <summary>
-        /// ³¬Ê±
+        /// è¶…æ—¶
         /// </summary>
         int Timeout { get; set; }
         /// <summary>
-        /// ÊÇ·ñÒÑÁ¬½Ó
+        /// æ˜¯å¦å·²è¿æ¥
         /// </summary>
         bool IsConnected { get; }
         /// <summary>
-        /// µ±Ç°Á¬½Ó×´Ì¬
+        /// å½“å‰è¿æ¥çŠ¶æ€
         /// </summary>
         SocketState State { get; }
         /// <summary>
-        /// ·¢ËÍÁ÷Á¿
+        /// å‘é€æµé‡
         /// </summary>
         long SendLength { get; }
         /// <summary>
-        /// ½ÓÊÕÁ÷Á¿
+        /// æ¥æ”¶æµé‡
         /// </summary>
         long ReceiveLength { get; }
         /// <summary>
-        /// ÍøÂçÓÃÁ¿
+        /// ç½‘ç»œç”¨é‡
         /// </summary>
         long NetUsage { get; }
         /// <summary>
-        /// Á¬½Ó
+        /// è¿æ¥
         /// </summary>
         /// <param name="ip"></param>
         /// <param name="port"></param>
         void Connect(string ip, int port);
         /// <summary>
-        /// ·¢ËÍ
+        /// å‘é€
         /// </summary>
         /// <param name="bytes"></param>
         void Send(byte[] bytes);
         /// <summary>
-        /// ¶Ï¿ª
+        /// æ–­å¼€
         /// </summary>
         void Close();
         /// <summary>
-        /// ×´Ì¬±ä»¯
+        /// çŠ¶æ€å˜åŒ–
         /// </summary>
         /// <param name="state"></param>
         void OnStateChanged(SocketState state);
         /// <summary>
-        /// »ñÈ¡ÏûÏ¢
+        /// è·å–æ¶ˆæ¯
         /// </summary>
         /// <param name="msgType"></param>
         /// <param name="msgBytes"></param>

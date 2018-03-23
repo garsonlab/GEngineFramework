@@ -21,7 +21,7 @@ namespace GEngine.Core
         private IController m_controller;
         private IGManager m_manager;
 
-        //µ¥ÀıÖ»ÔÚº¯Êı¹¹ÔìÊ±¸³Öµ
+        //å•ä¾‹åªåœ¨å‡½æ•°æ„é€ æ—¶èµ‹å€¼
         public static Facade Instance{get { return m_instance; }}
 
         public Facade()
@@ -35,7 +35,7 @@ namespace GEngine.Core
             }
         }
 
-        // ÊµÀı»¯ËùÓĞµÄÄ£¿é
+        // å®ä¾‹åŒ–æ‰€æœ‰çš„æ¨¡å—
         protected virtual void InitializeFacade()
         {
             m_model = new Model();
@@ -44,14 +44,14 @@ namespace GEngine.Core
             m_manager = new GManager();
         }
 
-        // Ìí¼Ó¹ÜÀíÆ÷
+        // æ·»åŠ ç®¡ç†å™¨
         protected virtual void InitializeManager()
         {
             RegisterManager(new MessageManager());
             RegisterManager(new TimerManager());
             RegisterManager(new GarbageManager());
             RegisterManager(new ResourceManager());
-            RegisterManager(new InputManager());//ÒÀÀµTimerManager
+            RegisterManager(new InputManager());//ä¾èµ–TimerManager
             RegisterManager(new UIManager());
         }
 

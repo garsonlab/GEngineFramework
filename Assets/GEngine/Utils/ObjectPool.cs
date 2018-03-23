@@ -13,7 +13,7 @@ using UnityEngine;
 namespace GEngine
 {
     /// <summary>
-    /// »º´æ³Ø
+    /// ç¼“å­˜æ± 
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class ObjectPool<T>
@@ -29,12 +29,12 @@ namespace GEngine
         public int countInactive { get { return m_Stack.Count; } }
 
         /// <summary>
-        /// ¹¹Ôìº¯Êı
+        /// æ„é€ å‡½æ•°
         /// </summary>
-        /// <param name="creater">´´½¨µ÷ÓÃ£¬Èç new T()»ò GameObject.Instantiate</param>
-        /// <param name="onGet">»ñÈ¡Ê±µ÷ÓÃ</param>
-        /// <param name="onRelease">ÊÍ·ÅÊ±µ÷ÓÃ</param>
-        /// <param name="onClear">Çå³ıÊ±µ÷ÓÃ</param>
+        /// <param name="creater">åˆ›å»ºè°ƒç”¨ï¼Œå¦‚ new T()æˆ– GameObject.Instantiate</param>
+        /// <param name="onGet">è·å–æ—¶è°ƒç”¨</param>
+        /// <param name="onRelease">é‡Šæ”¾æ—¶è°ƒç”¨</param>
+        /// <param name="onClear">æ¸…é™¤æ—¶è°ƒç”¨</param>
         public ObjectPool(T_Callback<T> creater, Callback_1<T> onGet, Callback_1<T> onRelease, Callback_1<T> onClear)
         {
             this.m_Creater = creater;

@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GEngine.Managers
 {
     /// <summary>
-    /// ÒÆ¶¯Éè±¸ÉÏ²Ù×÷£¬Ö»ÏìÓ¦µÚÒ»´¥Ãşµã
+    /// ç§»åŠ¨è®¾å¤‡ä¸Šæ“ä½œï¼Œåªå“åº”ç¬¬ä¸€è§¦æ‘¸ç‚¹
     /// </summary>
     public class MobileInput : InputBase
     {
