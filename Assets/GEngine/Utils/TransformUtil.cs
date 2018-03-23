@@ -9,7 +9,7 @@
 
 using UnityEngine;
 
-namespace GEngine.Utils
+namespace GEngine
 {
     public class TransformUtil
     {
@@ -48,6 +48,38 @@ namespace GEngine.Utils
             else
             {
                 root.gameObject.layer = layer;
+            }
+        }
+
+
+        public static Transform FindChild(Transform root, string path)
+        {
+            return root.Find(path);
+        }
+
+        public static Component GetComponent(Transform root, string component, string path = "")
+        {
+            if (StringUtil.IsNull(path))
+                return root.GetComponent(component);
+            else
+            {
+                var trans = FindChild(root, path);
+                if (trans != null)
+                    return trans.GetComponent(component);
+                return null;
+            }
+        }
+
+        public static T GetComponent<T>(Transform root, string path = "")
+        {
+            if (StringUtil.IsNull(path))
+                return root.GetComponent<T>();
+            else
+            {
+                var trans = FindChild(root, path);
+                if (trans != null)
+                    return trans.GetComponent<T>();
+                return default(T);
             }
         }
 

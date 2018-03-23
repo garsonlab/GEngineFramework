@@ -13,7 +13,7 @@ using System.Text;
 namespace GEngine
 {
     /// <summary>
-    /// Json½Úµã£¬´´½¨Ê±ÓÃJsonNode.New***()
+    /// JsonèŠ‚ç‚¹ï¼Œåˆ›å»ºæ—¶ç”¨JsonNode.New***()
     /// </summary>
 	public class JsonNode
 	{
@@ -574,7 +574,7 @@ namespace GEngine
 	}
 
     /// <summary>
-    /// Json½âÎöÆ÷
+    /// Jsonè§£æå™¨
     /// </summary>
 	public struct JsonParser
 	{
@@ -1665,7 +1665,7 @@ namespace GEngine
 	}
 
     /// <summary>
-    /// Json±£´æÆ÷
+    /// Jsonä¿å­˜å™¨
     /// </summary>
 	public class JsonPrinter
 	{
@@ -1676,7 +1676,7 @@ namespace GEngine
 			writer = new Writer(false);
 			writed = new Dictionary<JsonNode, bool>();
 		}
-		public JsonPrinter(bool pretty)//ÊÇ·ñ¸ñÊ½»¯±£´æ
+		public JsonPrinter(bool pretty)//æ˜¯å¦æ ¼å¼åŒ–ä¿å­˜
 		{
 			if (pretty)
 			{

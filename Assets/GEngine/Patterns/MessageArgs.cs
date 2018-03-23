@@ -42,6 +42,25 @@ namespace GEngine.Patterns
         /// </summary>
         public object Sender { get { return m_sender; } }
 
+        /// <summary>
+        /// ×ª»»body
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public T GetData<T>()
+        {
+            return (T) m_body;
+        }
+        /// <summary>
+        /// ×ª»»sender
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public T GetSender<T>()
+        {
+            return (T) m_sender;
+        }
+
         public override string ToString()
         {
             string msg = "Message Type: " + m_type;

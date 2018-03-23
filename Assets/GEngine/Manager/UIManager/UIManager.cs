@@ -53,7 +53,7 @@ namespace GEngine.Managers
         }
         public void Show<T>(object parm, Callback_0 callback) where T : Panel, new()
         {
-            string name = typeof (T).ToString();
+            string name = typeof(T).ToString();
             Panel panel;
             if (!m_allPages.TryGetValue(name, out panel))
             {
@@ -65,7 +65,7 @@ namespace GEngine.Managers
             if (panel.panelMode == PanelMode.HideSameLayer)
             {
                 int count = m_showing.Count;
-                for (int i = count-1; i >= 0; i--)
+                for (int i = count - 1; i >= 0; i--)
                 {
                     if (m_showing[i].panelType == panel.panelType)
                     {
@@ -84,6 +84,22 @@ namespace GEngine.Managers
                 m_showing.Clear();
             }
             m_showing.Add(panel);
+        }
+
+        public T GetPanel<T>() where T : Panel
+        {
+            string name = typeof(T).ToString();
+            return (T) GetPanel(name);
+        }
+
+        public Panel GetPanel(string name)
+        {
+            Panel panel;
+            if (!m_allPages.TryGetValue(name, out panel))
+            {
+                panel = null;
+            }
+            return panel;
         }
 
         public void Close<T>() where T : Panel
@@ -162,7 +178,7 @@ namespace GEngine.Managers
             uiCamera.gameObject.layer = LayerMask.NameToLayer("UI");
             uiCamera.transform.SetParent(uiRoot);
             uiCamera.transform.localPosition = new Vector3(0, 0, -100);
-            uiCamera.clearFlags = CameraClearFlags.Depth;
+            uiCamera.clearFlags = CameraClearFlags.Skybox;//“‘∫Ûªª≥…Dep
             uiCamera.orthographic = true;
             uiCamera.nearClipPlane = -50;
             uiCamera.farClipPlane = 200;
@@ -199,11 +215,13 @@ namespace GEngine.Managers
                 rect.anchorMax = Vector2.one*0.5f;
                 rect.sizeDelta = new Vector2(Config.DesignWidth, Config.DesignHeight);
                 rect.localPosition = Vector3.zero;
+                rect.localScale = Vector3.one;
                 root = rect;
             }
 
             root.SetSiblingIndex(sibling);
             return root;
         }
+
     }
 }

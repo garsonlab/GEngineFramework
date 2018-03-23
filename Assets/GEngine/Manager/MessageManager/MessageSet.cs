@@ -27,7 +27,7 @@ namespace GEngine.Managers
             m_set.Sort();
         }
 
-        public void RemoveMessageHandler(MessageHandler handler, Utils.ObjectPool<MessageData> m_data)
+        public void RemoveMessageHandler(MessageHandler handler, ObjectPool<MessageData> m_data)
         {
             int count = m_set.Count;
             for (int i = 0; i < count; i++)
@@ -44,7 +44,7 @@ namespace GEngine.Managers
             m_removes.Clear();
         }
 
-        public void RemoveAll(Utils.ObjectPool<MessageData> m_data)
+        public void RemoveAll(ObjectPool<MessageData> m_data)
         {
             int count = m_set.Count;
             for (int i = 0; i < count; i++)

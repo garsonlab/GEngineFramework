@@ -23,7 +23,7 @@ namespace GEngine
         /// <summary>
         /// 使用Bundle模式
         /// </summary>
-        public static bool BundleMode = true;
+        public static bool BundleMode = false;
         /// <summary>
         /// 网络加密
         /// </summary>
@@ -36,5 +36,9 @@ namespace GEngine
         /// Bundle关系表名
         /// </summary>
         public const string BundleManifest = "BundleManifest.manifest";
+        /// <summary>
+        /// 语言包
+        /// </summary>
+        public static LaunghType LaunghType = LaunghType.Zh_CN;
     }
 }

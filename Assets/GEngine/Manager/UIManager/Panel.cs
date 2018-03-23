@@ -24,9 +24,9 @@ namespace GEngine.Managers
         public PanelMode panelMode;
         public PanelLoad panelLoad;
 
-        public string assetPath;
-        public GameObject gameObject;
-        public Transform transform;
+        protected string assetPath;
+        protected GameObject gameObject;
+        protected Transform transform;
 
         public PanelState PanelState { get { return m_panelState; } }
         public Panel() : this(PanelType.Normal, PanelMode.DoNothing, PanelLoad.SyncLoad) { }
@@ -63,9 +63,10 @@ namespace GEngine.Managers
                 }
             }
 
-            if (m_panelState != PanelState.None || m_panelState != PanelState.Loading)
+            if (m_panelState != PanelState.None && m_panelState != PanelState.Loading)
             {
                 OnShow(parm);
+                m_panelState = PanelState.Showing;
                 if (callback != null)
                     callback();
             }
@@ -83,7 +84,7 @@ namespace GEngine.Managers
             
         }
 
-        public void Resize()
+        public virtual void Resize()
         {
             
         }
@@ -93,7 +94,7 @@ namespace GEngine.Managers
         /// <param name="parm"></param>
         protected virtual void OnShow(object parm)
         {
-            
+            gameObject.SetActive(true);
         }
 
         public virtual void Close()
@@ -144,7 +145,7 @@ namespace GEngine.Managers
         {
             if (m_panelState == PanelState.Destroy)//刚打开就要销毁
             {
-                
+                Debug.Log("Destroy on Load End");
             }
 
             if (obj == null)
@@ -188,6 +189,11 @@ namespace GEngine.Managers
                     return m_manager.uiRoot;
             }
             return null;
+        }
+
+        protected T GetComponent<T>(Transform root, string path = "")
+        {
+            return TransformUtil.GetComponent<T>(root, path);
         }
 
     }

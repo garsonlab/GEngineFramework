@@ -55,7 +55,7 @@ namespace GEngine.Managers
     /// <summary>
     /// 输入控制管理器， 支持鼠标、点触的八种单点操作及缩放
     /// </summary>
-    public class InputManager : Manager
+    public class InputManager : Manager<InputManager>
     {
         public new const string NAME = "InputManager";
 

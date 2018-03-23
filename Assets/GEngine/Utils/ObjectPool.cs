@@ -10,8 +10,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GEngine.Utils
+namespace GEngine
 {
+    /// <summary>
+    /// 缓存池
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ObjectPool<T>
     {
         readonly Stack<T> m_Stack = new Stack<T>();
@@ -24,6 +28,13 @@ namespace GEngine.Utils
         public int countActive { get { return countAll - countInactive; } }
         public int countInactive { get { return m_Stack.Count; } }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="creater">创建调用，如 new T()或 GameObject.Instantiate</param>
+        /// <param name="onGet">获取时调用</param>
+        /// <param name="onRelease">释放时调用</param>
+        /// <param name="onClear">清除时调用</param>
         public ObjectPool(T_Callback<T> creater, Callback_1<T> onGet, Callback_1<T> onRelease, Callback_1<T> onClear)
         {
             this.m_Creater = creater;

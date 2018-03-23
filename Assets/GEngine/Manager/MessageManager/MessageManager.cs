@@ -8,7 +8,6 @@
  */
 using System.Collections.Generic;
 using GEngine.Patterns;
-using GEngine.Utils;
 
 namespace GEngine.Managers
 {

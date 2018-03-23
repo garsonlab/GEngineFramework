@@ -107,10 +107,11 @@ namespace GEngine.Patterns
 
         #region Members
 
-        private MessageManager m_messageManager;
-        private TimerManager m_timerManager;
-        private ResourceManager m_resourceManager;
-        private InputManager m_inputManager;
+        private static MessageManager m_messageManager;
+        private static TimerManager m_timerManager;
+        private static ResourceManager m_resourceManager;
+        private static InputManager m_inputManager;
+        private static UIManager m_uiManager;
 
         private StartCoroutineHandler m_startCoroutine;
         #endregion
@@ -162,6 +163,19 @@ namespace GEngine.Patterns
                 if (m_inputManager == null)
                     m_inputManager = RetrieveManager<InputManager>();
                 return m_inputManager;
+            }
+        }
+
+        /// <summary>
+        /// UI¹ÜÀíÆ÷
+        /// </summary>
+        public UIManager UIManager
+        {
+            get
+            {
+                if (m_uiManager == null)
+                    m_uiManager = RetrieveManager<UIManager>();
+                return m_uiManager;
             }
         }
 

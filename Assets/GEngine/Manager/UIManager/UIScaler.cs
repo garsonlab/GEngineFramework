@@ -69,7 +69,7 @@ namespace GEngine.Managers
         /// <param name="policy">适配策略</param>
         /// <param name="transform">适配目标</param>
         /// <param name="isStretch">是否拉伸, 指按最大缩放比例</param>
-        public static void Rescale(AdaptPolicy policy, RectTransform transform, bool isStretch)
+        public static void Rescale(AdaptPolicy policy, RectTransform transform, bool isStretch = false)
         {
             float scale = isStretch ? m_scaleM : (scaleMode == ScaleMode.MatchWidth ? m_scaleX : m_scaleY);
             transform.localScale = Vector3.one*scale;

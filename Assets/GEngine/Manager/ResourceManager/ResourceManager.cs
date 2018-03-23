@@ -290,6 +290,9 @@ namespace GEngine.Managers
         //加载Bundle数据文件
         void LoadManifest()
         {
+            if(!Config.BundleMode)
+                return;
+
             string path = FileManager.GetBundleRealPath(Config.BundleManifest);
             FileLoadAgent agent = new FileLoadAgent();
             m_startCoroutine(agent.LoadSync(path, bytes =>
