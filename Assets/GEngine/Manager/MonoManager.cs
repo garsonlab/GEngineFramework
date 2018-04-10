@@ -28,7 +28,7 @@ namespace GEngine.Managers
             if (onUpdate != null)
                 onUpdate();
         }
-
+        
         void OnGUI()
         {
             if (onDraw != null)

@@ -178,7 +178,7 @@ namespace GEngine.Managers
             uiCamera.gameObject.layer = LayerMask.NameToLayer("UI");
             uiCamera.transform.SetParent(uiRoot);
             uiCamera.transform.localPosition = new Vector3(0, 0, -100);
-            uiCamera.clearFlags = CameraClearFlags.Skybox;//以后换成Dep
+            uiCamera.clearFlags = CameraClearFlags.Depth;//以后换成Dep
             uiCamera.orthographic = true;
             uiCamera.nearClipPlane = -50;
             uiCamera.farClipPlane = 200;

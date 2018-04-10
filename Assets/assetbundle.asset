@@ -11,4 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1938e0729663e4146aa06c1e1c0c59ec, type: 3}
   m_Name: assetbundle
   m_EditorClassIdentifier: 
-  filters: []
+  filters:
+  - assetPath: Assets/GEngine
+    isFolderPack: 0
+    isChildFolder: 1
+    extension: .prefab
+    isSingle: 1
+    isDepend: 1
+    isDependSplit: 1
+    dependName: 
+    isExpand: 1

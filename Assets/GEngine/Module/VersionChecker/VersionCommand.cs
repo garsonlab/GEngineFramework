@@ -43,7 +43,7 @@ namespace GEngine.Modules
             m_temPath = Application.persistentDataPath + "/TemFolder/";
             m_waitingList = new Queue<JsonNode>();
 
-            RegisterMessage(MsgType.VERSION_CHECK, CheckVeison);
+            RegisterMessage(GConst.VERSION_CHECK, CheckVeison);
             Facade.Instance.RegisterMediator(new VersionMediator());
             mediator = RetrieveMediator<VersionMediator>(VersionMediator.NAME);
         }

@@ -51,7 +51,7 @@ namespace GEngine.Managers
                 mono = obj.AddComponent<MonoManager>();
             }
             m_startCoroutine = mono.StartCoroutine;
-            LoadManifest();
+            //LoadManifest();由加载本地配置时统一调用，可填充进度条
             GarbageManager.Instance.AddCollector(UnloadUnusedBundles);
         }
 

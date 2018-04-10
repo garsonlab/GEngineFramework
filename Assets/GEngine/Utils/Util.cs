@@ -24,7 +24,7 @@ namespace GEngine
         public static int[] Random(int min, int max, uint num)
         {
             List<int> randoms = new List<int>();
-            if (max - min <= num)
+            if (max - min >= num)
             {
                 while (randoms.Count < num)
                 {

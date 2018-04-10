@@ -164,7 +164,8 @@ DependName：依赖包名，在IsDepend开启前提下，若IsDependSplit未开�
         GUILayout.EndVertical();
         GUILayout.EndScrollView();
 
-        //if (GUI.changed)
-        //    EditorUtility.SetDirty(configs);
+        if (GUI.changed)
+            EditorUtility.SetDirty(target);
+        serializedObject.ApplyModifiedProperties();
     }
 }
